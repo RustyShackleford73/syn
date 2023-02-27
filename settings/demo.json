@@ -1,0 +1,59 @@
+{
+    "comments":
+    [
+        "This is the templete for configure a dataset for the pipeline.",
+
+        "Further instruction goes here..."
+    ],
+
+    
+    "necessary inputs":
+    {
+        "path_detections": [
+            "test/kpts_cam0.dat",
+            "test/kpts_cam1.dat"
+        ],
+
+        "path_cameras": [
+            "test/demo0.json",
+            "test/demo1.json"
+        ],
+                    
+        "corresponding_frames":[0, 0]
+    },
+
+
+    "optional inputs":
+    {
+        "ground_truth": {"filepath":"test/gt.txt", "frequency":20},
+        "joint_id": 2
+    },
+
+
+    "settings":
+    {
+        "num_detections": 120,
+        "opt_calib": false,
+        "cf_exact":false,
+        "sync_method":"bf",
+        "undist_points": true,
+        "rolling_shutter": true,
+        "init_rs": [0, 0],
+        "motion_type":"KE",
+        "rs_bounds":false,
+        "motion_prior":false,
+        "motion_reg":true,
+        "motion_weights":1,
+        "cut_detection_second": 0,
+        "camera_sequence": [],
+        "ref_cam": 0,
+        "thres_Fmatix": 20,
+        "thres_PnP": 20,
+        "thres_outlier": 20,
+        "thres_triangulation": 20,
+        "smooth_factor": [10,20],
+        "sampling_rate": 20,
+        "path_output": "output/demo.pkl"
+    }
+
+}

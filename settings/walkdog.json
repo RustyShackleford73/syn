@@ -1,0 +1,59 @@
+{
+    "comments":
+    [
+        "This is the templete for configure a dataset for the pipeline.",
+
+        "Further instruction goes here..."
+    ],
+
+    
+    "necessary inputs":
+    {
+        "path_detections": [
+            "../bodypose3d/detected/WalkDog.55011271/WalkDog.55011271.txt",
+            "../bodypose3d/detected/WalkDog.58860488/WalkDog.58860488.txt"
+        ],
+
+        "path_cameras": [
+            "test/55011271.json",
+            "test/58860488.json"
+        ],
+                    
+        "corresponding_frames":[1, 1]
+    },
+
+
+    "optional inputs":
+    {
+        "ground_truth": {"filepath":"", "frequency":50},
+        "joint_id": 10
+    },
+
+
+    "settings":
+    {
+        "num_detections": 1500,
+        "opt_calib": false,
+        "cf_exact":false,
+        "sync_method":"bf",
+        "undist_points": true,
+        "rolling_shutter": true,
+        "init_rs": [0, 0],
+        "motion_type":"F",
+        "rs_bounds":false,
+        "motion_prior":true,
+        "motion_reg":true,
+        "motion_weights":10,
+        "cut_detection_second": 0,
+        "camera_sequence": [],
+        "ref_cam": 0,
+        "thres_Fmatix": 20,
+        "thres_PnP": 20,
+        "thres_outlier": 20,
+        "thres_triangulation": 20,
+        "smooth_factor": [10,20],
+        "sampling_rate": 1,
+        "path_output": "output/walkdog.pkl"
+    }
+
+}
